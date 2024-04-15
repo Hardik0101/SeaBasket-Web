@@ -1,0 +1,8 @@
+.image {
+  object-fit: contain;
+  height: 140px;
+  width: 120px;
+}
+.marquee {
+  z-index: -9999;
+}
