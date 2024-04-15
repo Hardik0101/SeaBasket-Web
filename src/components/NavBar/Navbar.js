@@ -27,12 +27,12 @@ function NavBar() {
 
         {!isOpen && (
           <div className="sm:hidden" onClick={toggleNavbar}>
-            <HiMenuAlt1 size={30} />
+            <HiMenuAlt1 size={30} color="white" />
           </div>
         )}
         {isOpen && (
           <div className="sm:hidden" onClick={toggleNavbar}>
-            <AiOutlineCloseCircle size={40} />
+            <AiOutlineCloseCircle size={40} color="white" />
           </div>
         )}
 
