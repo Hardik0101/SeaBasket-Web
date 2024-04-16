@@ -2,7 +2,7 @@ import React from "react";
 import "./HorizontalCard.css";
 import { FiShoppingCart } from "react-icons/fi";
 
-function HorizontalCard({ items, children, onClick }) {
+function HorizontalCard({ items, children, detailsHandler }) {
   return (
     <>
       <h1 className="font-mono font-semibold">{children}</h1>
@@ -10,6 +10,7 @@ function HorizontalCard({ items, children, onClick }) {
         <div
           key={index}
           className="w-80 h-40 mr-3 mb-3 border border-gray-400  rounded cursor-pointer font-mono hover:border-teal-500"
+          onClick={() => detailsHandler(product.id)}
         >
           <div className="flex flex-row items-center p-1">
             <img className="image" src={product.image} />
@@ -23,7 +24,7 @@ function HorizontalCard({ items, children, onClick }) {
                 <h1>${product.price}</h1>
                 <h1>{product.rating.rate}</h1>
               </div>
-              <div className="flex justify-end mt-3" onClick={onClick}>
+              <div className="flex justify-end mt-3">
                 <FiShoppingCart size={30} />{" "}
               </div>
             </div>

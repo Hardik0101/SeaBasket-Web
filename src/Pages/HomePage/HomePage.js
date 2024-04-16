@@ -8,12 +8,14 @@ import {
 } from "../../store/redux/dataSlice";
 import HorizontalCard from "../../components/HorizonatlCard/HorizonatlCard";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
   const dispatch = useDispatch();
   const menClothing = useSelector((data) => data.data.menClothing);
   const womenClothing = useSelector((data) => data.data.womenClothing);
   const electronics = useSelector((data) => data.data.electronics);
+  const navigate = useNavigate();
 
   useEffect(() => {
     try {
@@ -24,6 +26,10 @@ function HomePage() {
       console.log(e);
     }
   }, [dispatch]);
+
+  function detailsHandler(id) {
+    navigate(`/details/${id}`);
+  }
 
   return (
     <>
@@ -39,15 +45,18 @@ function HomePage() {
       <div className="font-mono p-2 ">
         <h1 className="text-xl">New Men's Clothing</h1>
         <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
-          <HorizontalCard items={menClothing} />
+          <HorizontalCard items={menClothing} detailsHandler={detailsHandler} />
         </div>
         <h1 className="text-xl">New Women's Clothing</h1>
         <div className="flex flex-wrap overflow-hidde justify-center xl:justify-normal">
-          <HorizontalCard items={womenClothing} />
+          <HorizontalCard
+            items={womenClothing}
+            detailsHandler={detailsHandler}
+          />
         </div>
         <h1 className="text-xl">New Electronics</h1>
         <div className="flex flex-wrap overflow-hidde justify-center xl:justify-normal">
-          <HorizontalCard items={electronics} />
+          <HorizontalCard items={electronics} detailsHandler={detailsHandler} />
         </div>
       </div>
     </>

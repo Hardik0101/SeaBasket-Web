@@ -11,6 +11,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/redux/store";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Profile from "./Pages/Profile/Profile";
+import DetailsPage from "./Pages/DetailsPage/Details";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/product" element={<ProductPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/details/:id" element={<DetailsPage />} />
         </Routes>
         <Footer />
       </Provider>
