@@ -2,8 +2,8 @@ import React from "react";
 
 function ContactUs() {
   return (
-    <div className="flex justify-center items-center h-screen font-mono">
-      <div className="w-1/2 bg-white p-8 rounded shadow-md border border-teal-300">
+    <div className="flex justify-center items-center h-full my-12 font-mono">
+      <div className="w-1/2 bg-white p-8 rounded shadow-md border border-teal-300 max-sm:w-4/5 max-md:w-4/5">
         <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
         <form>
           <div className="mb-4">

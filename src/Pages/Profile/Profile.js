@@ -3,16 +3,14 @@ import React from "react";
 function Profile() {
   return (
     <>
-      <div className="flex flex-row p-2 m-2 justify-center gap-4">
-        <div>
-          <img
-            src={require("../../assets/images/profile.png")}
-            width={160}
-            height={160}
-          />
-        </div>
+      <div className="flex flex-row p-2 m-2 justify-center gap-4 max-sm:flex-wrap max-md:flex-wrap">
+        <img
+          className="w-40 h-40 max-sm:w-1/5 max-sm:h-1/5"
+          src={require("../../assets/images/profile.png")}
+          alt="Profile Img"
+        />
 
-        <div className="w-1/2 bg-white p-8 rounded shadow-md border border-teal-300">
+        <div className="w-1/2 bg-white p-8 rounded shadow-md border border-teal-300 max-sm:w-4/5 max-md:w-4/5">
           <h2 className="text-2xl font-bold mb-4">User Profile</h2>
           <form>
             <div className="mb-4">

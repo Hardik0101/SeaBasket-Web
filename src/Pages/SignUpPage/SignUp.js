@@ -2,8 +2,8 @@ import React from "react";
 
 function SignUpPage() {
   return (
-    <div className="flex flex-row justify-center items-center font-mono h-screen">
-      <div className="flex flex-col border border-teal-700 rounded-lg p-4 w-80 items-center">
+    <div className="flex flex-row justify-center items-center font-mono h-full my-12 max-md:flex-wrap-reverse max-sm:h-full max-sm:my-9">
+      <div className="flex flex-col border border-teal-700 rounded-lg p-4 w-1/4 items-center max-lg:w-1/2 max-xl:w-1/3 max-sm:w-3/4">
         <h1 className=" text-xl">SignUp</h1>
         <div className="flex flex-col w-full mb-1">
           <label>Email</label>
@@ -52,7 +52,7 @@ function SignUpPage() {
         </p>
       </div>
       <img
-        className="w-1/3"
+        className="w-1/3 max-sm:hidden max-md:w-2/3"
         src={require("../../assets/images/SignUp.png")}
         alt="Logo"
       />

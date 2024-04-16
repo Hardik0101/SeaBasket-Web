@@ -38,15 +38,15 @@ function HomePage() {
 
       <div className="font-mono p-2 ">
         <h1 className="text-xl">New Men's Clothing</h1>
-        <div className="flex flex-wrap overflow-hidden max-sm:justify-center">
+        <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
           <HorizontalCard items={menClothing} />
         </div>
         <h1 className="text-xl">New Women's Clothing</h1>
-        <div className="flex flex-wrap overflow-hidden max-sm:justify-center">
+        <div className="flex flex-wrap overflow-hidde justify-center xl:justify-normal">
           <HorizontalCard items={womenClothing} />
         </div>
         <h1 className="text-xl">New Electronics</h1>
-        <div className="flex flex-wrap overflow-hidden max-sm:justify-center">
+        <div className="flex flex-wrap overflow-hidde justify-center xl:justify-normal">
           <HorizontalCard items={electronics} />
         </div>
       </div>

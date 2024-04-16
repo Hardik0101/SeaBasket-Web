@@ -27,7 +27,7 @@ function CartPage() {
       </div>
       <div className="font-mono p-2">
         <h1 className="text-xl">New Men's Clothing</h1>
-        <div className="flex flex-wrap overflow-hidden">
+        <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
           <HorizontalCard items={menClothing} />
         </div>
       </div>

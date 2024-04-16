@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchAllProducts,
@@ -10,15 +10,13 @@ import {
 import HorizontalCard from "../../components/HorizonatlCard/HorizonatlCard";
 import { GrSort } from "react-icons/gr";
 import { BiFilter } from "react-icons/bi";
+import "./Product.css";
 
 function ProductPage() {
   const dispatch = useDispatch();
   const category = useSelector((data) => data.data.category);
-  // const menClothing = useSelector((data) => data.data.menClothing);
-  // const womenClothing = useSelector((data) => data.data.womenClothing);
-  // const electronics = useSelector((data) => data.data.electronics);
   const allproducts = useSelector((data) => data.data.allproducts);
-  const [modalShow, setModalShow] = useState(false);
+
   useEffect(() => {
     try {
       dispatch(fetchCategory());
@@ -32,7 +30,6 @@ function ProductPage() {
   }, [dispatch]);
 
   function filterHandler() {
-    setModalShow(true);
     return console.log("filter pressed");
   }
 
@@ -42,17 +39,17 @@ function ProductPage() {
 
   return (
     <>
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-row m-2 gap-3 ">
-          <h1 className="border border-teal-600 rounded p-2 hover:bg-teal-300 cursor-pointer">
+      <div className="flex flex-row justify-between items-center max-sm:flex-wrap max-sm:justify-center">
+        <div className="items flex flex-row m-2 gap-3">
+          <h1 className="border border-teal-600 rounded p-2 hover:bg-teal-300 cursor-pointer max-sm:text-sm">
             For you
           </h1>
           {category.map((items, index) => (
             <div
               key={index}
-              className="border border-teal-600 rounded p-2 hover:bg-teal-300 cursor-pointer"
+              className="border border-teal-600 rounded p-2 hover:bg-teal-300 cursor-pointer max-sm:h-10"
             >
-              <h1 className="capitalize">{items}</h1>
+              <h1 className="capitalize max-sm:text-sm max-sm:w-32">{items}</h1>
             </div>
           ))}
         </div>
@@ -72,7 +69,7 @@ function ProductPage() {
         </div>
       </div>
       <hr />
-      <div className="m-2 flex flex-wrap">
+      <div className="m-2 flex flex-wrap justify-center">
         <HorizontalCard items={allproducts} />
       </div>
     </>

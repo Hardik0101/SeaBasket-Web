@@ -144,6 +144,7 @@ function NavBar() {
 
             <div className="flex flex-row gap-2 items-center mt-2">
               <Link
+                onClick={toggleNavbar}
                 to="/login"
                 className="bg-black text-white p-1 rounded font-medium w-20 h-8 text-center hover:opacity-80 border border-white border-3"
               >
@@ -151,6 +152,7 @@ function NavBar() {
               </Link>
 
               <Link
+                onClick={toggleNavbar}
                 to="/signup"
                 className="bg-white text-black p-1 rounded font-medium w-20 h-8  text-center hover:opacity-80 border border-black border-3"
               >
