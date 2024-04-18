@@ -96,10 +96,9 @@ function NavBar() {
         </div>
         {/* mobile ui */}
       </nav>
-      {isOpen && (
-        <div className="navbarMobile w-full flex justify-center p-3 bg-teal-500 sm:hidden md:hidden z-50 ">
-       
-            <ul className="flex flex-col gap-7 items-center">
+      {isOpen && ( 
+        <div className="navbarMobile w-full flex justify-center p-3 bg-teal-500 sm:hidden md:hidden z-50 max-sm:flex-wrap max-md:flex-wrap">
+            <ul className="flex flex-col gap-7 items-center w-screen">
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
                 <Link
                   to="/"
@@ -141,7 +140,6 @@ function NavBar() {
                 </Link>
               </li>
             </ul>
-
             <div className="flex flex-row gap-2 items-center mt-2">
               <Link
                 onClick={toggleNavbar}
