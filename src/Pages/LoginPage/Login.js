@@ -5,7 +5,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 function LoginPage() {
   return (
-    <div className="flex flex-row justify-center items-center font-mono h-screen  max-md:flex-wrap max-sm:h-full max-sm:my-9 ">
+    <div className="flex flex-row justify-center items-center   h-screen  max-md:flex-wrap max-sm:h-full max-sm:my-9 ">
       <img
         className="w-1/3 max-sm:hidden max-md:w-3/5"
         src={require("../../assets/images/Login.png")}

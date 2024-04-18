@@ -2,7 +2,7 @@ import React from "react";
 
 function SignUpPage() {
   return (
-    <div className="flex flex-row justify-center items-center font-mono h-screen max-md:flex-wrap-reverse max-sm:h-full max-sm:my-9">
+    <div className="flex flex-row justify-center items-center   h-screen max-md:flex-wrap-reverse max-sm:h-full max-sm:my-9">
       <div className="flex flex-col border border-teal-700 rounded-lg p-4 w-1/4 items-center max-lg:w-1/2 max-xl:w-1/3 max-sm:w-3/4">
         <h1 className=" text-xl">SignUp</h1>
         <div className="flex flex-col w-full mb-1">

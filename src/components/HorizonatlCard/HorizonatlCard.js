@@ -6,11 +6,11 @@ import { FaStar } from "react-icons/fa";
 function HorizontalCard({ items, children, detailsHandler }) {
   return (
     <>
-      <h1 className="font-mono font-semibold">{children}</h1>
+      <h1 className=" font-semibold">{children}</h1>
       {items.map((product, index) => (
         <div
           key={index}
-          className="w-80 h-40 mr-3 mb-3 border border-gray-400 rounded cursor-pointer font-mono transition-transform transform hover:scale-95"
+          className="w-80 h-40 mr-3 mb-3 border border-gray-400 rounded cursor-pointer  transition-transform transform hover:scale-95"
           onClick={() => detailsHandler(product.id)}
         >
           <div className="flex flex-row items-center p-1">

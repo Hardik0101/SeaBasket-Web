@@ -10,7 +10,7 @@ function NavBar() {
 
   return (
     <>
-      <nav className="h-16 bg-teal-700 flex items-center justify-between p-2">
+      <nav className="navBar h-16 bg-teal-700 flex items-center justify-between p-2">
         <Link to="/">
           <div className="flex flex-row items-center gap-2 hover:cursor-pointer max-sm:w-10 max-md:w-12">
             <img
@@ -18,7 +18,7 @@ function NavBar() {
               src={require("../../assets/images/Logo.png")}
               alt="Logo"
             />
-            <h1 className="font-mono text-3xl font-bold max-sm:hidden max-md:hidden max-lg:hidden ">
+            <h1 className=" text-3xl font-bold max-sm:hidden max-md:hidden max-lg:hidden ">
               <span className="text-teal-200">Sea</span>
               <span className="text-slate-100">Basket</span>
             </h1>
@@ -40,7 +40,7 @@ function NavBar() {
           <li className="p-1 rounded-lg">
             <Link
               to="/"
-              className="text-white font-mono text-lg hover:underline tracking-wider"
+              className="text-white  text-lg hover:underline tracking-wider"
             >
               Home
             </Link>
@@ -48,7 +48,7 @@ function NavBar() {
           <li className="p-1 rounded-lg">
             <Link
               to="/product"
-              className="text-white font-mono text-lg hover:underline tracking-wider"
+              className="text-white  text-lg hover:underline tracking-wider"
             >
               Product
             </Link>
@@ -56,7 +56,7 @@ function NavBar() {
           <li className="p-1 rounded-lg">
             <Link
               to="/cart"
-              className="text-white font-mono text-lg hover:underline tracking-wider"
+              className="text-white  text-lg hover:underline tracking-wider"
             >
               Cart
             </Link>
@@ -64,7 +64,7 @@ function NavBar() {
           <li className="p-1 rounded-lg">
             <Link
               to="/profile"
-              className="text-white font-mono text-lg hover:underline tracking-wider"
+              className="text-white  text-lg hover:underline tracking-wider"
             >
               Profile
             </Link>
@@ -72,7 +72,7 @@ function NavBar() {
           <li className="p-1 rounded-lg">
             <Link
               to="/contact"
-              className="text-white font-mono text-lg hover:underline tracking-wider"
+              className="text-white  text-lg hover:underline tracking-wider"
             >
               Contact Us
             </Link>
@@ -97,13 +97,13 @@ function NavBar() {
         {/* mobile ui */}
       </nav>
       {isOpen && (
-        <div className=" w-full flex justify-center p-3 bg-teal-500 navbar sm:hidden md:hidden z-50 ">
-          <div className="">
+        <div className="navbarMobile w-full flex justify-center p-3 bg-teal-500 sm:hidden md:hidden z-50 ">
+       
             <ul className="flex flex-col gap-7 items-center">
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
                 <Link
                   to="/"
-                  className="text-white font-mono text-lg hover:underline tracking-wider"
+                  className="text-white  text-lg hover:underline tracking-wider"
                 >
                   Home
                 </Link>
@@ -111,7 +111,7 @@ function NavBar() {
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
                 <Link
                   to="/product"
-                  className="text-white font-mono text-lg hover:underline tracking-wider"
+                  className="text-white  text-lg hover:underline tracking-wider"
                 >
                   Product
                 </Link>
@@ -119,7 +119,7 @@ function NavBar() {
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
                 <Link
                   to="/cart"
-                  className="text-white font-mono text-lg hover:underline tracking-wider"
+                  className="text-white  text-lg hover:underline tracking-wider"
                 >
                   Cart
                 </Link>
@@ -127,7 +127,7 @@ function NavBar() {
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
                 <Link
                   to="/profile"
-                  className="text-white font-mono text-lg hover:underline tracking-wider"
+                  className="text-white  text-lg hover:underline tracking-wider"
                 >
                   Profile
                 </Link>
@@ -135,7 +135,7 @@ function NavBar() {
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
                 <Link
                   to="/contact"
-                  className="text-white font-mono text-lg hover:underline tracking-wider"
+                  className="text-white  text-lg hover:underline tracking-wider"
                 >
                   Contact Us
                 </Link>
@@ -159,7 +159,7 @@ function NavBar() {
                 SignUp
               </Link>
             </div>
-          </div>
+          
         </div>
       )}
     </>

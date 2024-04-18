@@ -12,6 +12,7 @@ import { store } from "./store/redux/store";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Profile from "./Pages/Profile/Profile";
 import DetailsPage from "./Pages/DetailsPage/Details";
+import "./App.css"
 
 function App() {
   return (

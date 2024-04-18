@@ -37,9 +37,8 @@ function DetailsPage() {
         <TripleMaze text={"Loading..."} center={false} />
         </div>
       ) : (
-        <div className="flex flex-row justify-center m-5 gap-5 font-mono h-screen max-sm:flex-wrap max-md:flex-wrap">
+        <div className="flex flex-row justify-center m-5 gap-5   h-screen max-sm:flex-wrap max-md:flex-wrap">
           <div>
-            
           <img src={details.image} className="w-52" />
           </div>
           <div className="w-2/5 text-justify max-sm:w-full max-md:w-full">

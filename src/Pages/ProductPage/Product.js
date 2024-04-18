@@ -111,7 +111,7 @@ function ProductPage() {
                   ? { backgroundColor: "#00897B", color: "white" }
                   : {}
               }
-              className="border border-teal-600 rounded p-2 hover:bg-teal-300 cursor-pointer max-sm:h-10 font-mono"
+              className="border border-teal-600 rounded p-2 hover:bg-teal-300 cursor-pointer max-sm:h-10  "
             >
               <h1 className="capitalize max-sm:text-sm max-sm:w-32">{items}</h1>
             </div>

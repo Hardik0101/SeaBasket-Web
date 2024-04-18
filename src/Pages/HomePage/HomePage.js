@@ -11,6 +11,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { TripleMaze } from 'react-spinner-animated';
 import 'react-spinner-animated/dist/index.css';
+import "@fontsource/poppins";
 
 
 function HomePage() {
@@ -50,11 +51,11 @@ function HomePage() {
         <div className="flex w-1/3 max-sm:w-1/2">
           <SearchBar />
         </div>
-        <button className="border border-teal-400 p-1 rounder hover:bg-teal-200 rounded h-9 font-mono">
+        <button className="border border-teal-400 p-1 rounder hover:bg-teal-200 rounded h-9  ">
           Search
         </button>
       </div>
-      <div className="font-mono p-2 ">
+      <div className="homeDiv p-2 ">
         <h1 className="text-xl">New Men's Clothing</h1>
         <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
           <HorizontalCard items={menClothing} detailsHandler={detailsHandler} />

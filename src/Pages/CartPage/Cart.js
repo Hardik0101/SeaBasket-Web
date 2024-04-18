@@ -32,7 +32,7 @@ function CartPage() {
       <div className="flex justify-center m-3 border border-teal-600 rounded">
         <h1 className="p-3 capitalize">Your Cart is Empty :) </h1>
       </div>
-      <div className="font-mono p-2">
+      <div className=" p-2">
         <h1 className="text-xl">New Men's Clothing</h1>
         <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
           <HorizontalCard items={menClothing} detailsHandler={detailsHandler} />

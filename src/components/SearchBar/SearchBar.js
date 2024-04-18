@@ -10,7 +10,7 @@ function SearchBar() {
           id="search"
           type="text"
           placeholder="Search..."
-          className="py-2 w-11/12 px-3 h-9 border border-none outline-none text-black font-mono"
+          className="py-2 w-11/12 px-3 h-9 border border-none outline-none text-black  "
         />
       </div>
     </>
