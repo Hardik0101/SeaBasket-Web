@@ -5,11 +5,11 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 function LoginPage() {
   return (
-    <div className="flex flex-row justify-center items-center font-mono h-full my-12 max-md:flex-wrap max-sm:h-full max-sm:my-9">
+    <div className="flex flex-row justify-center items-center font-mono h-screen  max-md:flex-wrap max-sm:h-full max-sm:my-9 ">
       <img
-        className="w-1/3 max-sm:hidden max-md:w-2/3"
+        className="w-1/3 max-sm:hidden max-md:w-3/5"
         src={require("../../assets/images/Login.png")}
-        alt="Logo"
+        alt="Login"
       />
 
       <div className="flex flex-col border  border-teal-700 rounded-lg p-4 w-1/4 items-center max-lg:w-1/2 max-xl:w-1/3 max-sm:w-3/4">
@@ -20,7 +20,7 @@ function LoginPage() {
             id="email"
             type="email"
             placeholder="Your email"
-            className="py-2 px-3 h-9 rounded border  border-gray text-black"
+            className="py-2 px-3 h-9 rounded border  border-gray text-black outline-none"
           />
         </div>
         <div className="flex flex-col mt-3  w-full">
@@ -29,7 +29,7 @@ function LoginPage() {
             id="password"
             type="password"
             placeholder="Your Password"
-            className="py-2 px-3 h-9 rounded border border-gray text-black"
+            className="py-2 px-3 h-9 rounded border border-gray text-black outline-none"
           />
         </div>
         <a href="/signup" className="text-sm text-blue-400 mt-2">

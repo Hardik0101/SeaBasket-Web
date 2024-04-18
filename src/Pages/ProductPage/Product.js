@@ -13,9 +13,13 @@ import { GrSort } from "react-icons/gr";
 import { BiFilter } from "react-icons/bi";
 import "./Product.css";
 import { useNavigate } from "react-router-dom";
+import { TripleMaze } from 'react-spinner-animated';
+import 'react-spinner-animated/dist/index.css';
+
 
 function ProductPage() {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false)
   const category = useSelector((data) => data.data.category);
   const allproducts = useSelector((data) => data.data.allproducts);
   const menClothing = useSelector((state) => state.data.menClothing);
@@ -28,19 +32,22 @@ function ProductPage() {
 
   useEffect(() => {
     try {
+      setIsLoading(true)
       dispatch(fetchCategory());
       dispatch(fetchMenClothing());
       dispatch(fetchWomenClothing());
       dispatch(fetchElectronics());
       dispatch(fetchAllProducts());
       dispatch(fetchJeweleryItems());
+      setTimeout(() => setIsLoading(false), 2000); 
     } catch (e) {
       console.log(e);
     }
   }, [dispatch]);
 
+
   function getProductData(item) {
-    let productData = allproducts;
+    let productData = null;
     switch (item) {
       case "men's clothing":
         productData = menClothing;
@@ -76,6 +83,11 @@ function ProductPage() {
   }
 
   return (
+    <>
+    {(isLoading ? 
+    <div className="flex justify-center items-center h-screen w-screen">
+    <TripleMaze text={"Loading..."} center={false} />
+    </div>:
     <>
       <div className="flex flex-row justify-between items-center max-sm:flex-wrap max-sm:justify-center">
         <div className="items flex flex-row m-2 gap-3">
@@ -124,6 +136,8 @@ function ProductPage() {
       <div className="m-2 flex flex-wrap justify-center">
         <HorizontalCard items={pressed} detailsHandler={detailsHandler} />
       </div>
+      </>
+     )}
     </>
   );
 }

@@ -97,7 +97,7 @@ function NavBar() {
         {/* mobile ui */}
       </nav>
       {isOpen && (
-        <div className=" w-full flex justify-center p-3 bg-teal-500 navbar sm:hidden md:hidden ">
+        <div className=" w-full flex justify-center p-3 bg-teal-500 navbar sm:hidden md:hidden z-50 ">
           <div className="">
             <ul className="flex flex-col gap-7 items-center">
               <li className="p-1 rounded-lg" onClick={toggleNavbar}>
