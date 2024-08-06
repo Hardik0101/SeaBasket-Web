@@ -28,7 +28,7 @@ function HomePage() {
       dispatch(fetchMenClothing());
       dispatch(fetchWomenClothing());
       dispatch(fetchElectronics());
-      setTimeout(() => setIsLoading(false), 2000); 
+      setTimeout(() => setIsLoading(false), 1000); 
     } catch (e) {
       console.log(e);
         setIsLoading(false); 
@@ -57,18 +57,18 @@ function HomePage() {
       </div>
       <div className="homeDiv p-2 ">
         <h1 className="text-xl">New Men's Clothing</h1>
-        <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
+        <div className="flex flex-wrap justify-center r">
           <HorizontalCard items={menClothing} detailsHandler={detailsHandler} />
         </div>
         <h1 className="text-xl">New Women's Clothing</h1>
-        <div className="flex flex-wrap overflow-hidde justify-center xl:justify-normal">
+        <div className="flex flex-wrap overflow-hidde justify-center">
           <HorizontalCard
             items={womenClothing}
             detailsHandler={detailsHandler}
           />
         </div>
         <h1 className="text-xl">New Electronics</h1>
-        <div className="flex flex-wrap overflow-hidde justify-center xl:justify-normal">
+        <div className="flex flex-wrap overflow-hidde justify-center">
           <HorizontalCard items={electronics} detailsHandler={detailsHandler} />
         </div>
       </div>

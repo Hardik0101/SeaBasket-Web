@@ -17,7 +17,7 @@ function DetailsPage() {
       try {
         setIsLoading(true); 
         await dispatch(fetchDetails(id));
-        setTimeout(() => setIsLoading(false), 2000); 
+       setIsLoading(false);
       } catch (error) {
         console.log(error);
         setIsLoading(false); 
