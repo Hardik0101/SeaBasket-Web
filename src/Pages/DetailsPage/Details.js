@@ -2,25 +2,25 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchDetails } from "../../store/redux/detailsSlice";
-import { TripleMaze } from 'react-spinner-animated';
-import 'react-spinner-animated/dist/index.css';
+import { TripleMaze } from "react-spinner-animated";
+import "react-spinner-animated/dist/index.css";
 import { FaStar } from "react-icons/fa";
 
 function DetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const details = useSelector((data) => data.details.details);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setIsLoading(true); 
+        setIsLoading(true);
         await dispatch(fetchDetails(id));
-       setIsLoading(false);
+        setIsLoading(false);
       } catch (error) {
         console.log(error);
-        setIsLoading(false); 
+        setIsLoading(false);
       }
     };
 
@@ -34,20 +34,20 @@ function DetailsPage() {
     <>
       {isLoading ? (
         <div className="flex justify-center items-center h-screen w-screen">
-        <TripleMaze text={"Loading..."} center={false} />
+          <TripleMaze text={"Loading..."} center={false} />
         </div>
       ) : (
         <div className="flex flex-row justify-center m-5 gap-5   h-screen max-sm:flex-wrap max-md:flex-wrap">
           <div>
-          <img src={details.image} className="w-52" />
+            <img src={details.image} className="w-52" alt={details.title} />
           </div>
           <div className="w-2/5 text-justify max-sm:w-full max-md:w-full">
             <h1 className="text-xl capitalize">{details.title}</h1>
             <div className="flex flex-row justify-between items-center text-lg mt-2">
               <h1>${details.price}</h1>
               <div className="flex flex-row items-center gap-1">
-              <FaStar size={16} color="#F6C324" />
-              <h1>{details?.rating?.rate}</h1>
+                <FaStar size={16} color="#F6C324" />
+                <h1>{details?.rating?.rate}</h1>
               </div>
             </div>
             <h1 className="mt-3">About This Product:</h1>

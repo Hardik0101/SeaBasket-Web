@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LoginPage from "./Pages/LoginPage/Login";
 import HomePage from "./Pages/HomePage/HomePage";
 import SignUpPage from "./Pages/SignUpPage/SignUp";
@@ -12,7 +12,7 @@ import { store } from "./store/redux/store";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import Profile from "./Pages/Profile/Profile";
 import DetailsPage from "./Pages/DetailsPage/Details";
-import "./App.css"
+import "./App.css";
 
 function App() {
   return (
