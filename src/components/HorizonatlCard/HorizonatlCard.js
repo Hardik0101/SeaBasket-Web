@@ -24,9 +24,9 @@ function HorizontalCard({ items, children, detailsHandler }) {
               <div className="flex flex-row justify-between p-2">
                 <h1>${product.price}</h1>
                 <div className="flex flex-row items-center gap-1">
-                <FaStar size={14} color="#F6C324"/>
-                
-                <h1>{product?.rating?.rate}</h1>
+                  <FaStar size={14} color="#F6C324" />
+
+                  <h1>{product?.rating?.rate}</h1>
                 </div>
               </div>
               <div className="flex justify-end mt-3">

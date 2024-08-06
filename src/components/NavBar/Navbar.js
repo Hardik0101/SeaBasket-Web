@@ -96,68 +96,67 @@ function NavBar() {
         </div>
         {/* mobile ui */}
       </nav>
-      {isOpen && ( 
+      {isOpen && (
         <div className="navbarMobile fixed w-full h-screen flex justify-center p-3 bg-teal-500 sm:hidden md:hidden z-50 max-sm:flex-wrap max-md:flex-wrap">
-            <ul className="flex flex-col gap-7 items-center w-screen">
-              <li className="p-1 rounded-lg" onClick={toggleNavbar}>
-                <Link
-                  to="/"
-                  className="text-white  text-lg hover:underline tracking-wider"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="p-1 rounded-lg" onClick={toggleNavbar}>
-                <Link
-                  to="/product"
-                  className="text-white  text-lg hover:underline tracking-wider"
-                >
-                  Product
-                </Link>
-              </li>
-              <li className="p-1 rounded-lg" onClick={toggleNavbar}>
-                <Link
-                  to="/cart"
-                  className="text-white  text-lg hover:underline tracking-wider"
-                >
-                  Cart
-                </Link>
-              </li>
-              <li className="p-1 rounded-lg" onClick={toggleNavbar}>
-                <Link
-                  to="/profile"
-                  className="text-white  text-lg hover:underline tracking-wider"
-                >
-                  Profile
-                </Link>
-              </li>
-              <li className="p-1 rounded-lg" onClick={toggleNavbar}>
-                <Link
-                  to="/contact"
-                  className="text-white  text-lg hover:underline tracking-wider"
-                >
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-            <div className="flex gap-4 -mt-64">
+          <ul className="flex flex-col gap-7 items-center w-screen">
+            <li className="p-1 rounded-lg" onClick={toggleNavbar}>
               <Link
-                onClick={toggleNavbar}
-                to="/login"
-                className="bg-black text-white p-1 rounded font-medium w-20 h-8 text-center hover:opacity-80 border border-white border-3"
+                to="/"
+                className="text-white  text-lg hover:underline tracking-wider"
               >
-                Login
+                Home
               </Link>
+            </li>
+            <li className="p-1 rounded-lg" onClick={toggleNavbar}>
+              <Link
+                to="/product"
+                className="text-white  text-lg hover:underline tracking-wider"
+              >
+                Product
+              </Link>
+            </li>
+            <li className="p-1 rounded-lg" onClick={toggleNavbar}>
+              <Link
+                to="/cart"
+                className="text-white  text-lg hover:underline tracking-wider"
+              >
+                Cart
+              </Link>
+            </li>
+            <li className="p-1 rounded-lg" onClick={toggleNavbar}>
+              <Link
+                to="/profile"
+                className="text-white  text-lg hover:underline tracking-wider"
+              >
+                Profile
+              </Link>
+            </li>
+            <li className="p-1 rounded-lg" onClick={toggleNavbar}>
+              <Link
+                to="/contact"
+                className="text-white  text-lg hover:underline tracking-wider"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+          <div className="flex gap-4 -mt-64">
+            <Link
+              onClick={toggleNavbar}
+              to="/login"
+              className="bg-black text-white p-1 rounded font-medium w-20 h-8 text-center hover:opacity-80 border border-white border-3"
+            >
+              Login
+            </Link>
 
-              <Link
-                onClick={toggleNavbar}
-                to="/signup"
-                className="bg-white text-black p-1 rounded font-medium w-20 h-8  text-center hover:opacity-80 border border-black border-3"
-              >
-                SignUp
-              </Link>
-            </div>
-          
+            <Link
+              onClick={toggleNavbar}
+              to="/signup"
+              className="bg-white text-black p-1 rounded font-medium w-20 h-8  text-center hover:opacity-80 border border-black border-3"
+            >
+              SignUp
+            </Link>
+          </div>
         </div>
       )}
     </>

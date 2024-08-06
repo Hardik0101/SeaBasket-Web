@@ -39,7 +39,10 @@ function CartPage() {
         </div>
         <h1 className="text-xl">New Women's Clothing</h1>
         <div className="flex flex-wrap overflow-hidden justify-center xl:justify-normal">
-          <HorizontalCard items={womenClothing} detailsHandler={detailsHandler} />
+          <HorizontalCard
+            items={womenClothing}
+            detailsHandler={detailsHandler}
+          />
         </div>
       </div>
     </>
